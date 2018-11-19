@@ -83,6 +83,12 @@ public class InPlaceSorts {
             arr[a] = temparr[a];
         }
     }
+    public void mergeSort(int[] arr) {
+        for (int i = 0; i < 10; i++)
+        {
+            int[] a = new int[];
+        }
+    }
     public void swap(String[] arr, int a, int b)
     {
         String temp = arr[a];
