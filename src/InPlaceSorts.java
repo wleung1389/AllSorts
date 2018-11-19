@@ -79,6 +79,9 @@ public class InPlaceSorts {
             temparr[i] = arr[b];
             arr[b] = 999999999;
         }
+        for(int a = 0; a < arr.length; a++) {
+            arr[a] = temparr[a];
+        }
     }
     public void swap(String[] arr, int a, int b)
     {

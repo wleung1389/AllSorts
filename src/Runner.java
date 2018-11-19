@@ -8,5 +8,11 @@ public class Runner {
         i.printStrArr(str);
         i.printIntArr(ints);
         i.printDoubleArr(doub);
+        i.BubbleSort(str);
+        i.insertionSort(ints);
+        i.selectionSort(doub);
+        i.printStrArr(str);
+        i.printIntArr(ints);
+        i.printDoubleArr(doub);
     }
 }
