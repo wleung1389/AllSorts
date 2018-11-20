@@ -68,25 +68,30 @@ public class InPlaceSorts {
     }
     public void insertionSort(int[] arr)
     {
-        int[] temparr = new int[arr.length];
-        for(int i = 0; i < arr.length; i++) {
-            int b = i;
-            for (int a = 0; a < arr.length; a++) {
-                if (arr[b] > arr[a]) {
-                    b = a;
-                }
-            }
-            temparr[i] = arr[b];
-            arr[b] = 999999999;
-        }
-        for(int a = 0; a < arr.length; a++) {
-            arr[a] = temparr[a];
-        }
-    }
-    public void mergeSort(int[] arr) {
-        for (int i = 0; i < 10; i++)
+        int smallest = arr[0];
+        int place = 0;
+        for(int z = 0; z < arr.length; z++)
         {
-            int[] a = new int[];
+            if(smallest > arr[z])
+            {
+                smallest = arr[z];
+                place = z;
+            }
+        }
+        arr[place] = arr[0];
+        arr[0] = smallest;
+        for(int i = 0; i < arr.length; i++) {
+            int currentPos = i;
+            int a = i - 1;
+            while(a > 0 && arr[currentPos] < arr[a])
+            {
+                a--;
+            }
+            for(int c = currentPos; c > a + 1; c--) {
+                int temp = arr[c];
+                arr[c] = arr[c - 1];
+                arr[c - 1] = temp;
+            }
         }
     }
     public void swap(String[] arr, int a, int b)
