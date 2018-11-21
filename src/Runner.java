@@ -3,26 +3,26 @@ public class Runner {
     {
         InPlaceSorts i = new InPlaceSorts();
         MergeSortLab m = new MergeSortLab();
-        String[] str = i.getRndStringArr(1000,10);
-        int[] ints = i.getRndIntArr(1,100,1000000);
-        double[] doub = i.getRndDoubleArr(1,100,50000);
-        int[] ints2 = i.getRndIntArr(1,100,50000);
-        String[] strings = i.getRndStringArr(100000,10);
+        String[] str = i.getRndStringArr(10000,10);
+        int[] ints = i.getRndIntArr(1,100,10000);
+        double[] doub = i.getRndDoubleArr(1,100,10000);
+        int[] ints2 = i.getRndIntArr(1,100,10000);
+        String[] strings = i.getRndStringArr(10000,10);
 
-        System.out.print("Bubble Sort with String Array(Unsorted) : ");
-        i.printStrArr(str);
+        //System.out.print("Bubble Sort with String Array(Unsorted) : ");
+        //i.printStrArr(str);
 
-        System.out.print("Insertion Sort with Int Array(Unsorted) : ");
-        i.printIntArr(ints);
+        //System.out.print("Insertion Sort with Int Array(Unsorted) : ");
+        //i.printIntArr(ints);
 
-        System.out.print("Selection Sort with Double Array(Unsorted) : ");
-        i.printDoubleArr(doub);
+        //System.out.print("Selection Sort with Double Array(Unsorted) : ");
+        //i.printDoubleArr(doub);
 
-        System.out.print("Merge Sort with Int Array(Unsorted) : ");
-        i.printIntArr(ints2);
+        //System.out.print("Merge Sort with Int Array(Unsorted) : ");
+        //i.printIntArr(ints2);
 
-        System.out.print("Merge Sort with String Array(Unsorted) : ");
-        i.printStrArr(strings);
+        //System.out.print("Merge Sort with String Array(Unsorted) : ");
+        //i.printStrArr(strings);
 
         long s = System.nanoTime();
         i.BubbleSort(str);
@@ -49,19 +49,19 @@ public class Runner {
         e = System.nanoTime();
         System.out.println("Merge Sort(String) took " + (e-s)/1000000 + " milliseconds.");
 
-        System.out.print("Bubble Sort with String Array : ");
-        i.printStrArr(str);
+        //System.out.print("Bubble Sort with String Array : ");
+        //i.printStrArr(str);
 
-        System.out.print("Insertion Sort with Int Array : ");
-        i.printIntArr(ints);
+        //System.out.print("Insertion Sort with Int Array : ");
+        //i.printIntArr(ints);
 
-        System.out.print("Selection Sort with Double Array : ");
-        i.printDoubleArr(doub);
+        //System.out.print("Selection Sort with Double Array : ");
+        //i.printDoubleArr(doub);
 
-        System.out.print("Merge Sort with Int Array : ");
-        i.printIntArr(ints2);
+        //System.out.print("Merge Sort with Int Array : ");
+        //i.printIntArr(ints2);
 
-        System.out.print("Merge Sort with String Array : ");
-        i.printStrArr(strings);
+        //System.out.print("Merge Sort with String Array : ");
+        //i.printStrArr(strings);
     }
 }
