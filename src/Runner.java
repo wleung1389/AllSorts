@@ -2,12 +2,10 @@ public class Runner {
     public static void main(String[] args)
     {
         InPlaceSorts i = new InPlaceSorts();
-        MergeSortLab m = new MergeSortLab();
+        RecursiveSort m = new RecursiveSort();
         String[] str = i.getRndStringArr(10000,10);
-        int[] ints = i.getRndIntArr(1,100,10000);
+        int[] ints = i.getRndIntArr(1,100,1000000);
         double[] doub = i.getRndDoubleArr(1,100,10000);
-        int[] ints2 = i.getRndIntArr(1,100,10000);
-        String[] strings = i.getRndStringArr(10000,10);
 
         //System.out.print("Bubble Sort with String Array(Unsorted) : ");
         //i.printStrArr(str);
@@ -25,29 +23,34 @@ public class Runner {
         //i.printStrArr(strings);
 
         long s = System.nanoTime();
-        i.BubbleSort(str);
+        //i.BubbleSort(str);
         long e = System.nanoTime();
         System.out.println("Bubble Sort(String) took " + (e-s)/1000000 + " milliseconds.");
 
         s = System.nanoTime();
-        i.insertionSort(ints);
+        //i.insertionSort(ints);
         e = System.nanoTime();
         System.out.println("Insertion Sort(Int) took " + (e-s)/1000000 + " milliseconds.");
 
         s = System.nanoTime();
-        i.selectionSort(doub);
+        //i.selectionSort(doub);
         e = System.nanoTime();
         System.out.println("Selection Sort(Doubles) took " + (e-s)/1000000 + " milliseconds.");
 
         s = System.nanoTime();
-        m.mergeSortInt(ints2);
+        //m.mergeSortInt(ints);
         e = System.nanoTime();
         System.out.println("Merge Sort(Int) took " + (e-s)/1000000 + " milliseconds.");
 
         s = System.nanoTime();
-        m.mergeSortStr(strings);
+        //m.mergeSortStr(str);
         e = System.nanoTime();
         System.out.println("Merge Sort(String) took " + (e-s)/1000000 + " milliseconds.");
+
+        s = System.nanoTime();
+        m.quickSort(ints,0,ints.length-1);
+        e = System.nanoTime();
+        System.out.println("Quick Sort(Ints) took " + (e-s)/1000000 + " milliseconds.");
 
         //System.out.print("Bubble Sort with String Array : ");
         //i.printStrArr(str);
